@@ -1,6 +1,15 @@
 import './style.css'
 import * as THREE from 'three'
 
+import { defineConfig } from 'vite'
+    import react from '@vitejs/plugin-react'
+    
+    // https://vitejs.dev/config/
+    export default defineConfig({
+      plugins: [react()],
+      base: "/vite-test-page/"
+    })
+
 const w= window.innerWidth;
 const h= window.innerHeight;
 const renderer = new THREE.WebGLRenderer({antialias: true});
